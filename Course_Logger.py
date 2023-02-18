@@ -7,16 +7,18 @@ class Course_Logger:
     log_level_error = logging.ERROR
 
     def __init__(self, log_level=logging.INFO):
-        format = "%(asctime)s - %(name)s - %(levelname)s - %(funcName)s:%(lineno)d - %(message)s"
-        logging.basicConfig(filename="app_log.log", level=log_level, format=format)
+        pass
+        # format = "%(asctime)s - %(name)s - %(levelname)s - %(funcName)s:%(lineno)d - %(message)s"
+        # logging.basicConfig(filename="app_log.log", level=log_level, format=format)
 
     def log(self, log: str, handler="unknown", level=log_level_debug):
-        if log is None or log.strip() == "":
-            log = "EMPTY_MESSAGE"
-        log_dictionary = dict({"handler": handler, "log": log})
-        if level == self.log_level_error:
-            logging.error(str(log_dictionary))
-        elif level == self.log_level_warning:
-            logging.warning(str(log_dictionary))
-        else:
-            logging.info(str(log_dictionary))
+        pass
+        # if log is None or log.strip() == "":
+        #     log = "EMPTY_MESSAGE"
+        # log_dictionary = dict({"handler": handler, "log": log})
+        # if level == self.log_level_error:
+        #     logging.error(str(log_dictionary))
+        # elif level == self.log_level_warning:
+        #     logging.warning(str(log_dictionary))
+        # else:
+        #     logging.info(str(log_dictionary))
