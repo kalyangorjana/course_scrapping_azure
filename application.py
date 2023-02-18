@@ -9,7 +9,9 @@ import pdf_amazon
 import MongoDB
 import SnowflakeDB
 
-app = Flask(__name__)
+application = Flask(__name__) # initializing a flask app
+app=application
+
 course = course_details.course_details()
 pdf = pdf_amazon.pdf_amazon()
 mongodb = MongoDB.MongoDB()
@@ -52,4 +54,4 @@ def error_page(e):
 
 
 if __name__=="__main__":
-    app.run(host="0.0.0.0",port=5003)
+    app.run(host='127.0.0.1', port=8000, debug=True)
