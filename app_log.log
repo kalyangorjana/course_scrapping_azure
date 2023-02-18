@@ -1,0 +1,247 @@
+2023-02-18 16:56:23,620 - werkzeug - INFO - _log:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://172.18.0.11:5003
+2023-02-18 16:56:23,620 - werkzeug - INFO - _log:224 - [33mPress CTRL+C to quit[0m
+2023-02-18 16:56:44,111 - root - INFO - log:22 - {'handler': 'unknown', 'log': 'searching for url https://ineuron.ai/courses'}
+2023-02-18 16:56:44,173 - root - INFO - log:22 - {'handler': 'unknown', 'log': 'Successfully got respose for the url https://ineuron.ai/courses'}
+2023-02-18 16:56:44,262 - root - INFO - log:22 - {'handler': 'unknown', 'log': 'Successfully got the all courses..'}
+2023-02-18 16:56:44,263 - root - INFO - log:22 - {'handler': 'unknown', 'log': 'Sending the all courses keys..'}
+2023-02-18 16:56:44,272 - werkzeug - INFO - _log:224 - 172.18.0.2 - - [18/Feb/2023 16:56:44] "GET / HTTP/1.1" 200 -
+2023-02-18 16:56:44,386 - app - ERROR - log_exception:1744 - Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1788, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1770, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/config/.local/lib/python3.8/site-packages/flask/ctx.py", line 351, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/config/.local/lib/python3.8/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1669, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1609, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/config/workspace/app.py", line 35, in error_page
+    return render_template(
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/config/.local/lib/python3.8/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 62, in get_source
+    return self._get_source_fast(environment, template)
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html
+2023-02-18 16:56:44,388 - werkzeug - INFO - _log:224 - 172.18.0.2 - - [18/Feb/2023 16:56:44] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2023-02-18 16:56:44,392 - werkzeug - ERROR - _log:224 - Error on request:
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1788, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1770, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/config/.local/lib/python3.8/site-packages/flask/ctx.py", line 351, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/config/.local/lib/python3.8/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1669, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1609, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/config/workspace/app.py", line 35, in error_page
+    return render_template(
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/config/.local/lib/python3.8/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 62, in get_source
+    return self._get_source_fast(environment, template)
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/werkzeug/serving.py", line 333, in run_wsgi
+    execute(self.server.app)
+  File "/config/.local/lib/python3.8/site-packages/werkzeug/serving.py", line 320, in execute
+    application_iter = app(environ, start_response)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2551, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2531, in wsgi_app
+    response = self.handle_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1727, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+  File "/config/workspace/app.py", line 45, in error_page
+    return render_template(
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/config/.local/lib/python3.8/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 62, in get_source
+    return self._get_source_fast(environment, template)
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html
+2023-02-18 16:56:47,934 - root - INFO - log:22 - {'handler': 'unknown', 'log': 'searching for selected course form all courses....'}
+2023-02-18 16:56:47,982 - root - INFO - log:22 - {'handler': 'unknown', 'log': 'Successfully got respose for the url https://ineuron.ai/course/MLFlow-Production-Server-Setup'}
+2023-02-18 16:56:48,014 - root - INFO - log:22 - {'handler': 'unknown', 'log': 'Successfully got respose as text for the url https://ineuron.ai/course/MLFlow-Production-Server-Setup'}
+2023-02-18 16:56:48,014 - root - INFO - log:22 - {'handler': 'unknown', 'log': 'getting data from the respose'}
+2023-02-18 16:56:48,024 - werkzeug - INFO - _log:224 - 172.18.0.2 - - [18/Feb/2023 16:56:48] "POST /course_details HTTP/1.1" 200 -
+2023-02-18 16:56:48,217 - app - ERROR - log_exception:1744 - Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1788, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1770, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/config/.local/lib/python3.8/site-packages/flask/ctx.py", line 351, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/config/.local/lib/python3.8/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1669, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1609, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/config/workspace/app.py", line 35, in error_page
+    return render_template(
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/config/.local/lib/python3.8/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 62, in get_source
+    return self._get_source_fast(environment, template)
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html
+2023-02-18 16:56:48,218 - werkzeug - INFO - _log:224 - 172.18.0.2 - - [18/Feb/2023 16:56:48] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2023-02-18 16:56:48,219 - werkzeug - ERROR - _log:224 - Error on request:
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1788, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1770, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/config/.local/lib/python3.8/site-packages/flask/ctx.py", line 351, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/config/.local/lib/python3.8/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1669, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1609, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/config/workspace/app.py", line 35, in error_page
+    return render_template(
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/config/.local/lib/python3.8/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 62, in get_source
+    return self._get_source_fast(environment, template)
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/werkzeug/serving.py", line 333, in run_wsgi
+    execute(self.server.app)
+  File "/config/.local/lib/python3.8/site-packages/werkzeug/serving.py", line 320, in execute
+    application_iter = app(environ, start_response)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2551, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2531, in wsgi_app
+    response = self.handle_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1727, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+  File "/config/workspace/app.py", line 45, in error_page
+    return render_template(
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/config/.local/lib/python3.8/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 62, in get_source
+    return self._get_source_fast(environment, template)
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html

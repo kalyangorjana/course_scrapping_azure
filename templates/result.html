@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Course Data</title>
+      <style>
+         .container {
+         padding: 15px;
+         }
+         .section-title {
+         font-size: 1.2rem;
+         font-weight: bold;
+         }
+         .learn-list li {
+         list-style: none;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <h1 class="section-title">Course Name:{{ json_data.title }}</h1>
+         <p>
+            {{ json_data.description }}
+         </p>
+         <h3 class="section-title">Class Details</h3>
+         <ul>
+            <li>Doubt Clearing: {{ json_data.class_details.doubtClearing }}</li>
+            <li>Start Date: {{ json_data.class_details.startDate }}</li>
+            <li>Timings: {{ json_data.class_details.timings }}</li>
+         </ul>
+         <h3 class="section-title">Pricing</h3>
+         <div class="price-details">
+            <ul>
+               <li>IN:{{ json_data.pricing.IN }}</li>
+               <li>US:{{ json_data.pricing.US }}</li>
+               <li>discount:{{ json_data.pricing.discount }}</li>
+               <li>isfree:{{ json_data.pricing.isFree }}</li>
+            </ul>
+         </div>
+         <h3 class="section-title">Course Features</h3>
+         <ul>
+            {% for feature in json_data.course_features %}
+            <li>{{ feature }}</li>
+            {% endfor %}
+         </ul>
+         <h3 class="section-title">What You Will Learn</h3>
+         <ul>
+            {% for learn in json_data.learn %}
+            <li>{{ learn }}</li>
+            {% endfor %}
+         </ul>
+         <h3 class="section-title">Requirements</h3>
+         <ul>
+            {% for requirement in json_data.requirements %}
+            <li>{{ requirement }}</li>
+            {% endfor %}
+         </ul>
+         <h3 class="section-title">Language</h3>
+         <p>{{ json_data.language }}</p>
+         <h3 class="section-title">Curriculum</h3>
+         <ul>
+            {% for curr in json_data.curriculum %}
+            <li>{{ curr }}</li>
+            {% endfor %}
+         </ul>
+         <h3 class="section-title">Instructors</h3>
+         {% for instructor in json_data.instructors %}
+         <div>
+            <h4>{{ instructor.name }}</h4>
+            <p>{{ instructor.description }}</p>
+            <p>Email: {{ instructor.email }}</p>
+         </div>
+         {% endfor %}
+      </div>
+   </body>
+</html>

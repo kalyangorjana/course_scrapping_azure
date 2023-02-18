@@ -1,1 +1,8 @@
-Flask
+flask
+flask_cors
+requests
+bs4
+reportlab
+pymongo
+snowflake-connector-python
+boto3

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Ineuron Courses</title>
+</head>
+<body>
+  <div class="form">
+    <form action="/course_details" method="POST">
+        <h1>Select A Coures</h1>
+        <select name = 'list'>
+          {% for item in myList %}
+            <option id = 'option'value="{{ item }}">{{ item }}</option>
+          {% endfor %}
+        </select>
+        <input type="submit" value="Get Details">
+    </form>
+</div>
+  
+</body>
+
+</html>
